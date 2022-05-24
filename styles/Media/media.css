@@ -1,0 +1,197 @@
+@media (max-width: 992px) {
+  .header__content {
+    margin-top: 40px;
+  }
+  .header__text-content__title {
+    font-size: 50px;
+  }
+  .header__text-content__text {
+    font-size: 16px;
+  }
+  .nav-list li {
+    margin-left: 22px;
+  }
+  .nav-list_item {
+    margin-top: 5px;
+  }
+  .section__products__nav__top__see-all {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .furniture__collection__1-img {
+    max-width: 320px;
+  }
+  .furniture__collection__1__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 650px;
+  }
+  .furniture__collection__1-text__container {
+    margin: 0 auto;
+  }
+  .furniture__collection__1-title {
+    margin: 0 auto;
+  }
+  .furniture__collection__1-subtitle {
+    margin: 0 auto;
+  }
+  .furniture__collection__2__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 650px;
+  }
+  .furniture__collection__2-text__container {
+    margin: 0 auto;
+  }
+  .furniture__collection__2-title {
+    margin: 0 auto;
+  }
+  .furniture__collection__2-subtitle {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 690px) {
+  .furniture__collection__1-img {
+    background-size: 250px;
+    background-position: center;
+  }
+  .section__products__nav__top__left-title {
+    padding-right: 50px;
+  }
+  .section__products__nav__top__left-selling {
+    padding-right: 0;
+  }
+  .section__products__nav__top__left-selling span {
+    font-size: 20px;
+  }
+  .section__products__nav__top__left-selling :first-child {
+    padding-right: 30px;
+  }
+  .section__products__cards__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-list li {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 10px 10px 10px 10px;
+  }
+  .header__text-content__title {
+    font-size: 25px;
+  }
+  .furniture__collection__1-img {
+    margin: 0 15px;
+  }
+  .furniture__collection__2-img {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .furniture__collection__1-text__container {
+    width: 250px;
+  }
+  .section__products__nav {
+    min-width: 300px;
+    background-size: 0;
+  }
+  .furniture__collection__1-img {
+    background-size: 250px;
+  }
+}
+
+@media (max-width: 370px) {
+  .section__products__cards__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .section__products__nav__lower {
+    width: 250px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .section__products__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 280px;
+    height: 444px;
+    margin-top: 70px;
+    border: solid #d9ab82;
+    background-color: #fff4e8;
+    border-radius: 10px;
+  }
+  .section__products__cards__button {
+    position: absolute;
+    top: -23px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 140px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #d9ab82;
+    cursor: pointer;
+  }
+  .section__products__cards__basket-img {
+    margin: auto 0;
+    padding-left: 8px;
+    width: 26px;
+    max-height: 14px;
+  }
+  .section__products__cards__title {
+    width: 250px;
+    margin-top: 30px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #3d3d3f;
+  }
+  .section__products__cards__img {
+    position: absolute;
+    bottom: 7.5px;
+    width: 250px;
+    height: 250px;
+  }
+  .section__products__cards__img img {
+    width: 250px;
+    max-height: 250px;
+    border-radius: 10px;
+  }
+}
+/*# sourceMappingURL=media.css.map */

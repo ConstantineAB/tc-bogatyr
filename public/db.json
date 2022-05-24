@@ -1,0 +1,94 @@
+{
+  "products": [
+        {
+          "id": 0,
+          "imageUrl": "./img/Product_img/ramen_stool.svg",
+          "name": "Стул",
+          "types": [0, 1],
+          "sizes": [26, 30, 40],
+          "price": 3803,
+          "category": 0,
+          "rating": 4
+        },
+        {
+          "id": 1,
+          "imageUrl": "./img/Product_img/taknion.png",
+          "name": "Дизайнерское кресло",
+          "types": [0],
+          "sizes": [26, 40],
+          "price": 20250,
+          "category": 1,
+          "rating": 6
+        },
+        {
+          "id": 2,
+          "imageUrl": "./img/Product_img/meg/7264633.jpg",
+          "name": "Диван угловой тканевый",
+          "types": [0],
+          "sizes": [26, 40],
+          "price": 29500,
+          "category": 1,
+          "rating": 4
+        },
+        {
+          "id": 3,
+          "imageUrl": "./img/Product_img/meg/kreslo_shihan_1.png",
+          "name": "Кресло из экокожи",
+          "types": [1],
+          "sizes": [26, 30, 40],
+          "price": 27500,
+          "category": 2,
+          "rating": 2
+        },
+        {
+          "id": 4,
+          "imageUrl": "./img/Product_img/arc.jpg",
+          "name": "Арка",
+          "types": [0, 1],
+          "sizes": [26, 30, 40],
+          "price": 15500,
+          "category": 3,
+          "rating": 8
+        },
+        {
+          "id": 5,
+          "imageUrl": "./img/Product_img/vann/rak.JPG",
+          "name": "Раковина",
+          "types": [0],
+          "sizes": [30, 40],
+          "price": 5800,
+          "category": 2,
+          "rating": 2
+        },
+        {
+          "id": 6,
+          "imageUrl": "./img/Product_img/lus.jpg",
+          "name": "Люстра",
+          "types": [0, 1],
+          "sizes": [26, 30, 40],
+          "price": 6750,
+          "category": 1,
+          "rating": 9
+        },
+        {
+          "id": 7,
+          "imageUrl": "./img/Product_img/meg.jpg",
+          "name": "Диван угловой",
+          "types": [0, 1],
+          "sizes": [26, 30, 40],
+          "price": 35000,
+          "category": 4,
+          "rating": 10
+        },
+        {
+          "id": 8,
+          "imageUrl": "./img/Product_img/bez.jpg",
+          "name": "Гостиный столик",
+          "types": [0, 1],
+          "sizes": [26, 30, 40],
+          "price": 8900,
+          "category": 5,
+          "rating": 10
+        }
+  ]
+}

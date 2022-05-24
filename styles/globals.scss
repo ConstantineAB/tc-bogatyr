@@ -1,0 +1,16 @@
+@import 'null.scss';
+
+.wrapper {
+  max-width: 100vw;
+}
+.__container__main {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+.__container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1250px;
+  font-family: 'Montserrat', sans-serif;
+}
