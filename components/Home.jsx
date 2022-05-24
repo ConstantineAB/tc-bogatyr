@@ -58,22 +58,6 @@ return (
                     </div>
                 </div>
         </div>
-
-        {/*<div className="section__products __container">
-            <div className="section__products__container">
-                <div className="section__products__nav">
-                    <div className="section__products__nav__top">
-                        <span className="section__products__nav__top__left">
-                            <span className="section__products__nav__top__left-title">Категории</span>
-                        </span>
-                        <span className="section__products__nav__top__see-all">
-                            
-                        </span>
-                    </div>
-                </div>
-                 
-          </div>
-        </div>*/}
     </div>
   );
 }

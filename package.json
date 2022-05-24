@@ -32,7 +32,6 @@
   "devDependencies": {
     "@types/node": "^17.0.32",
     "eslint": "8.14.0",
-    "eslint-config-next": "12.1.5",
-    "redux-devtools-extension": "^2.13.9"
+    "eslint-config-next": "12.1.5"
   }
 }
