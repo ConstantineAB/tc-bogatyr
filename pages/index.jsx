@@ -1,9 +1,6 @@
-import Link from 'next/link';
-import { useDispatch, useSelector } from 'react-redux';
 import Futter from '../components/Futter';
 import Header from '../components/Header';
 import Home from '../components/Home';
-import { fetchProducts } from '../store/actions/products';
 
 const index = () => {
   return (

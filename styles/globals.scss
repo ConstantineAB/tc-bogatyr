@@ -14,3 +14,10 @@
   max-width: 1250px;
   font-family: 'Montserrat', sans-serif;
 }
+
+@import 'Header/header.scss';
+@import 'Home/home.scss'; 
+@import 'Products/products.scss';
+@import 'Cart/cart.scss';
+@import 'Footer/footer.scss';
+@import 'Media/media.scss';
