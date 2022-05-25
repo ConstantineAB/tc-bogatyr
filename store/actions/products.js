@@ -9,7 +9,7 @@ export const fetchProducts = (sortBy, category) => (dispatch) => {
   dispatch(setLoaded(false))
   axios
     .get(
-      `http://localhost:8000/api/products?${
+      `https://bogatyr-json-server.herokuapp.com/api/products?${
         category !== null ? `category=${category}` : ''
       }&_sort=${sortBy.type}&_order=${sortBy.order}`,
     )
