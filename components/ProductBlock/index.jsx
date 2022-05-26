@@ -27,15 +27,15 @@ const onAddProduct = () => {
         name,
         imageUrl,
         price,
-        size: availableSizes[activeSize],
+        color: availableColors[activeSize],
         type: availableTypes[activeType],
     };
     onClickAddProducts(obj);
 };
     return ( 
             <div className="section__products__cards">
-                <div>
-                {/*<div className="pizza-block__selector">
+                {/*<div>
+                <div className="pizza-block__selector">
                     {availableTypes.map((type, index) => (
                         <span
                         key={type}
@@ -60,8 +60,8 @@ const onAddProduct = () => {
                         {size}
                     </span>
                 ))}
-                </div>*/}
-            </div>
+                </div>
+            </div>*/}
           <Button onClick={onAddProduct} className="section__products__cards__button" outline>
               <p>В корзину</p>
               <div className="section__products__cards__basket-img" >
