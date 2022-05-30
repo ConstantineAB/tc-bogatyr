@@ -13,7 +13,6 @@ const CartItem = ({ id, name, type, size, totalPrice, totalCount, onRemove, onMi
     onMinus(id)
   }
 
-
   return (
     <div className="cart__item">
          <div className="cart__item-img">

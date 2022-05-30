@@ -1,4 +1,5 @@
-import { Link } from 'next/link'
+import { Link } from 'next/link';
+import { motion } from 'framer-motion';
 
 export const Home = () => {
     
@@ -7,8 +8,22 @@ return (
         <div className="header__content __container">
               <div className="header__text-content">
                 <div className="header__text-content__title">
-                    Торговый центр "Богатырь"<br />
-                    Современная мебель
+                    <motion.div initial="hidden" animate="visible" variants={{
+                        hidden: {
+                            scale: .8,
+                            opacity: 0
+                        },
+                        visible: {
+                            scale: 1,
+                            opacity: 1,
+                            transition: {
+                                delay: .4
+                            }
+                        }
+                    }}>
+                        Торговый центр "Богатырь"<br />
+                        Современная мебель
+                    </motion.div>
                 </div>
 
                   <div className="header__text-content__text">
