@@ -87,9 +87,10 @@ button {
 
 .logo {
   padding-top: 50px;
-  width: 157px;
+  width: 180px;
   font-size: 26px;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .top-nav {
@@ -122,6 +123,7 @@ button {
 
 .nav-list li {
   margin: 7.5px 7.5px 7.5px 42px;
+  cursor: pointer;
 }
 
 .icon-nav {
@@ -145,6 +147,7 @@ button {
   width: max-content;
   height: 24px;
   z-index: 10;
+  cursor: pointer;
 }
 
 .basket span {
@@ -724,7 +727,7 @@ button {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 15px;
+  margin-top: 150px;
 }
 
 .cart__bottom-details {
@@ -963,5 +966,13 @@ button {
     max-height: 250px;
     border-radius: 10px;
   }
+}
+
+.howToOrder__title {
+  margin: 100px;
+}
+
+.howToOrder__subtitle {
+  margin-top: 50px;
 }
 /*# sourceMappingURL=globals.css.map */

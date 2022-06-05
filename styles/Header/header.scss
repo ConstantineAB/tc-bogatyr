@@ -13,9 +13,10 @@
   }
   .logo {
     padding-top: 50px;
-    width: 157px;
+    width: 180px;
     font-size: 26px;
     font-weight: 700;
+    cursor: pointer;
   }
   .top-nav {
     display: flex;
@@ -35,6 +36,7 @@
   }
   .nav-list li {
     margin: 7.5px 7.5px 7.5px 42px;
+    cursor: pointer;
   }
   .icon-nav {
     padding-top: 25px;
@@ -52,6 +54,7 @@
     width: max-content;
     height: 24px;
     z-index: 10;
+    cursor: pointer;
   }
   .basket span {
     margin: auto 0;

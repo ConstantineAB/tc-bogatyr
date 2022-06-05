@@ -117,7 +117,7 @@
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 15px;
+  margin-top: 150px;
 }
 
 .cart__bottom-details {

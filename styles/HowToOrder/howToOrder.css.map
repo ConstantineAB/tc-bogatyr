@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACf,MAAM,EAAE,KAAK;CAChB;;AAED,AAAA,qBAAqB,CAAC;EAClB,UAAU,EAAE,IAAI;CACnB",
+    "sources": [
+        "howToOrder.scss"
+    ],
+    "names": [],
+    "file": "howToOrder.css"
+}

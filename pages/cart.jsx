@@ -1,9 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
 import CartItem from '../components/CartItem';
+import Modal from 'react-modal';
 
 import { clearCart, removeCartItem, plusCartItem, minusCartItem } from '../store/actions/cart';
 import Link from 'next/link';
 import Button from '../components/Button';
+import ContactForm from '../components/ContactForm';
+import ProductContactForm from '../components/ProductContactForm';
+import { useState } from 'react';
+import axios from 'axios';
+import Header from '../components/Header';
+import Futter from '../components/Futter';
 
 const cart = () => {
   const dispatch = useDispatch();
@@ -13,6 +20,7 @@ const cart = () => {
   const addedProducts = Object.keys(items).map(key => {
     return items[key].items[0];
   })
+
 
   const onClearCart = () => {
     if (window.confirm('Вы действительно хотите очистить корзину?')) {
@@ -34,9 +42,16 @@ const cart = () => {
     dispatch(minusCartItem(id))
   }
 
-  const onClickOrder = () => {
-    //alert('ЭТА ФУНКЦИЯ ВРЕМЕННО НЕ ДОСТУПНА')
-  }
+  const [step, setStep] = useState(0);
+
+	const [price, setPrice] = useState(totalPrice)
+  const [count, setCount] = useState(totalCount)
+	
+	const [name, setName] = useState('');
+	const [phone, setPhone] = useState('');
+	const [email, setEmail] = useState('');
+	const [message, setMessage] = useState('');
+
 
   async function handleOnSubmit(e) {
     e.preventDefault();
@@ -52,17 +67,72 @@ const cart = () => {
     console.log(formData)
   }
 
+
+  function OpenModal({ action, step, close }) {
+		if(step == 1) {
+			return <div>
+				<button onClick={close}>Закрыть</button>
+				<button onClick={action}>Отправить</button>
+			</div>
+		} else if(step == 2) {
+			return <div>
+				<button onClick={close}>Закрыть</button>
+				<p>Идет отправка!</p>
+			</div>
+		} else if(step == 3) {
+			return <div>
+				<button onClick={close}>Закрыть</button>
+				<p>Письмо отправлено!</p>
+			</div>
+		} else if(step == 4) {
+			return <div>
+				<button onClick={close}>Закрыть</button>
+				<p>Произошла ошибка</p>
+			</div>
+		} else {
+			return null;
+		}
+	}
+
+	function closeModal() {
+	setStep(0);
+	}
+	
+	async function sendForm() {
+	
+		try {
+			
+			setStep(2);
+			 
+			await axios.post('http://localhost:3000/api/send-main-request', {
+				totalPrice, totalCount, name, phone, email, message
+			});
+			
+			setStep(3);
+
+			
+			setPrice('');
+      setCount('');
+
+			setName('');
+			setPhone('');
+			setEmail('');
+			setMessage('');
+			
+		} catch (error) {
+			
+			setStep(4);
+			
+			console.log('Sending error', error);
+		}
+	}
+
   return (
-    <div>
+    <div className='__container'>
+      <Header />
       <div className="cart-wrapper">
         <div className="header">
           <div className="container">
-            <div className="header__logo">
-              <div>
-                <h1>Mebel-tech</h1>
-                <p>Современная мебель</p>
-              </div>
-            </div>
             <div className="header__cart">
               <div className="button button--cart">
                 <div className="button__delimiter"></div>
@@ -137,8 +207,42 @@ const cart = () => {
                   onPlus={onPlusItem}
                 />
               ))}
+                
+              
             </div>
             <div className="cart__bottom">
+                <h2>Данные о заказе</h2>
+                <p>Общяя цена</p>
+                <p>{totalPrice}</p>
+                <input type='text' value={totalPrice} onChange={event => setPrice(event.target.value)}/>
+                <p>Общее количество</p>
+                <p>{totalCount}</p>
+                <input type='text' value={totalCount} onChange={event => setCount(event.target.value)}/>
+
+                <h2>Данные о вас</h2>
+                <p>Имя</p>
+                <p>{name}</p>
+                <input type='text' value={name} onChange={event => setName(event.target.value)}/>
+                <p>Телефон</p>
+                <p>{phone}</p>
+                <input type='text' value={phone} onChange={event => setPhone(event.target.value)}/>
+                <p>E-mail</p>
+                <p>{email}</p>
+                <input type='text' value={email} onChange={event => setEmail(event.target.value)}/>
+                <p>Сообщение</p> 
+                <p>{message}</p>
+                <input type='text' value={message} onChange={event => setMessage(event.target.value)}/>
+                
+                {step == 0 && <button onClick={() => setStep(1)}>Отправить</button>}
+                    <Modal
+                      isOpen={step != 0}
+                      onRequestClose={closeModal}
+                    >
+                  <OpenModal action={sendForm}
+                    step={step}
+                    close={() => setStep(0)}
+                  />	
+                    </Modal>
               <div className="cart__bottom-details">
                 <span>
                   Всего товаров: <b>{totalCount} шт.</b>
@@ -148,33 +252,15 @@ const cart = () => {
                 </span>
               </div>
               <div className="cart__bottom-buttons">
-                <a href="/" className="button button--outline button--add go-back-btn">
-                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 13L1 6.93015L6.86175 1" stroke="#D3D3D3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                <Link href="//allProducts" className="button button--outline button--add go-back-btn">
+                  <div>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7 13L1 6.93015L6.86175 1" stroke="#D3D3D3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
 
-                  <span>Вернуться назад</span>
-                </a>
-                  <form method="post" onSubmit={handleOnSubmit}>
-                    <p>
-                      <label htmlFor="name">Name</label>
-                      <input type="text" name="name" />
-                    </p>
-                    <p>
-                      <label htmlFor="email">Email</label>
-                      <input type="email" name="email" />
-                    </p>
-                    <p>
-                      <label htmlFor="message">Message</label>
-                      <textarea name="message" />
-                    </p>
-                    <p>
-                      <button>button</button>
-                    </p>
-                  </form>
-                  <Button onClick={onClickOrder} className="pay-btn">
-                    <span>asdf</span>
-                  </Button>
+                    <span>Вернуться назад</span>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>: 
@@ -192,6 +278,7 @@ const cart = () => {
         </div>
       </div>
     </div>
+    <Futter/>
   </div>
   ) 
 }
