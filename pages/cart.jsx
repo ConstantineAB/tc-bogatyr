@@ -104,7 +104,7 @@ const cart = () => {
 			
 			setStep(2);
 			 
-			await axios.post('http://localhost:3000/api/send-main-request', {
+			await axios.post('/api/send-main-request', {
 				totalPrice, totalCount, name, phone, email, message
 			});
 			

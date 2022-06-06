@@ -71,7 +71,7 @@ const CartItem = (props) => {
 			
 			setStep(2);
 			 
-			await axios.post('http://localhost:3000/api/send-request', {
+			await axios.post('/api/send-request', {
 				type, totalCount, userName, totalPrice, name, phone, email, message
 			});
 			
