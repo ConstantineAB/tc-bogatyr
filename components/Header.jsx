@@ -22,20 +22,6 @@ const Header = () => {
                       <Link href="/blog"><li className="nav-list_item">Блог</li></Link>
                   </ul>
                   <div className="icon-nav nav__container">
-
-                  <motion.div initial="hidden" animate="visible" variants={{
-                        hidden: {
-                            scale: .8,
-                            opacity: 0
-                        },
-                        visible: {
-                            scale: 1,
-                            opacity: 1,
-                            transition: {
-                                delay: .4
-                            }
-                        }
-                    }}>
                       <div className="basket">
                         <Link href="/cart">
                           <div>
@@ -47,7 +33,6 @@ const Header = () => {
                           </div>
                         </Link>
                       </div>
-                      </motion.div>
 
                       <div>
                           <img src="img/person.svg" />

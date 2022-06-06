@@ -8,22 +8,8 @@ return (
         <div className="header__content __container">
               <div className="header__text-content">
                 <div className="header__text-content__title">
-                    <motion.div initial="hidden" animate="visible" variants={{
-                        hidden: {
-                            scale: .8,
-                            opacity: 0
-                        },
-                        visible: {
-                            scale: 1,
-                            opacity: 1,
-                            transition: {
-                                delay: .4
-                            }
-                        }
-                    }}>
                         Торговый центр "Богатырь"<br />
                         Товары для дома и дачи
-                    </motion.div>
                 </div>
 
                   <div className="header__text-content__text">

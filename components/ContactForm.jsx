@@ -16,7 +16,9 @@ const customStyles = {
 };
 
 function ContactForm(props) {
-	console.log(props.onRemove)
+	const totalPrice = props.totalPrice
+	const totalCount = props.totalCount
+
 	const handleRemoveClick = () => {
 		props.onRemove(id)
 	  }
@@ -32,7 +34,8 @@ function ContactForm(props) {
 	const [step, setStep] = useState(0);
 	
 	const [type, setType] = useState(props.type)
-	const [price, setPrice] = useState(props.totalPrice)
+	const [price, setPrice] = useState(totalPrice)
+	const [count, setCount] = useState(totalCount)
 	const [name, setName] = useState('');
 	const [phone, setPhone] = useState('');
 	const [email, setEmail] = useState('');
@@ -75,7 +78,7 @@ function ContactForm(props) {
 			setStep(2);
 			 
 			await axios.post('http://localhost:3000/api/send-request', {
-				type, price, name, phone, email, message
+				type, totalPrice, name, phone, email, message
 			});
 			
 			setStep(3);
@@ -102,8 +105,8 @@ function ContactForm(props) {
 	<p>{type}</p>
 	<input type='text' value={type} onChange={event => setSize(event.target.value)}/>
 	<p>Цена</p>
-	<p>{price}</p>
-	<input type='text' value={price} onChange={() => setPrice(handlePlusItem)}/>
+	<p>{totalPrice}</p>
+	<input type='text' value={totalPrice} onChange={event => setPrice(event.target.value)}/>
 
 	<p>Имя</p>
 	<p>{name}</p>

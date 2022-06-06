@@ -9,6 +9,7 @@ const CartItem = (props) => {
   const totalPrice = props.totalPrice
   const totalCount = props.totalCount
   const productType = props.type
+  const name = props.name
 
   const handleRemoveClick = () => {
     props.onRemove(props.id)
@@ -28,7 +29,8 @@ const CartItem = (props) => {
 	const [price, setPrice] = useState(totalPrice)
   const [count, setCount] = useState(totalCount)
 
-	const [name, setName] = useState('');
+	const [names, setName] = useState(name);
+  const [userName, setUserName] = useState('');
 	const [phone, setPhone] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
@@ -70,7 +72,7 @@ const CartItem = (props) => {
 			setStep(2);
 			 
 			await axios.post('http://localhost:3000/api/send-request', {
-				type, totalCount, name, phone, email, message
+				type, totalCount, userName, totalPrice, name, phone, email, message
 			});
 			
 			setStep(3);
@@ -135,15 +137,21 @@ const CartItem = (props) => {
                     </Button>
                   </div>
                 </div>
-                <p>Тип товара</p>
-                <p>{type}</p>
-                <input type='text' value={type} onChange={event => setSize(event.target.value)}/>
+                <p>Название товара</p>
+                <p>{name}</p>
+                <input type='text' value={name} onChange={event => setName(event.target.value)}/>
                 <p>Цена</p>
                 <p>{totalCount}</p>
                 <input type='text' value={totalCount} onChange={event => setCount(event.target.value)}/>
                 <p>Количество</p>
                 <p>{totalPrice}</p>
                 <input type='text' value={totalPrice} onChange={event => setPrice(event.target.value)}/>
+
+                <p>Ф.И.О покупателя</p>
+                <p>{userName}</p>
+                <input type='text' value={userName} onChange={event => setUserName(event.target.value)}/>
+
+                
 
                 
                 
