@@ -3,8 +3,6 @@ import { useState } from 'react'
 import Button from './Button'
 import Modal from 'react-modal';
 
-//{ id, name, type, size, totalPrice, totalCount, onRemove, onMinus, onPlus, img }
-
 const CartItem = (props) => {
   const totalPrice = props.totalPrice
   const totalCount = props.totalCount

@@ -6,8 +6,7 @@ export default async function handler(req, res) {
 		subject: `Письмо с сайта krylevsky-test от ${req.body.name}`,
 		text: `
 			Oбщяя цена: ${req.body.totalPrice},
-			Общее количество: ${req.body.totalCount}
-			-----------------------------
+			Общее количество: ${req.body.totalCount},
 			Имя: ${req.body.name}, 
         	Телефон: ${req.body.phone},
         	E-mail: ${req.body.email},
