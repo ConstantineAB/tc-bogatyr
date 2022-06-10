@@ -225,12 +225,10 @@
   position: absolute;
   bottom: 7.5px;
   width: 300px;
-  height: 300px;
 }
 
 .section__products__cards__img img {
   width: 300px;
-  height: 300px;
   border-radius: 5px;
 }
 /*# sourceMappingURL=Products.css.map */

@@ -599,12 +599,10 @@ button {
   position: absolute;
   bottom: 7.5px;
   width: 300px;
-  height: 300px;
 }
 
 .section__products__cards__img img {
   width: 300px;
-  height: 300px;
   border-radius: 5px;
 }
 
@@ -763,8 +761,8 @@ button {
 .futter__container {
   margin-top: 50px;
   min-height: 180px;
-  background-color: #fae2c8;
-  border-radius: 10px;
+  background-color: #ffc787;
+  border-radius: 5px;
 }
 
 .futter__nav {

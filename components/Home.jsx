@@ -34,7 +34,7 @@ return (
               <div className="section__clients-container__images">
                   <div>Быстрая доставка</div>
                   <div>Гарантия качества</div>
-                  <div>Более 21-ти лет опыта на рынке</div>
+                  <div>Более 21-го года опыта на рынке</div>
               </div>
           </div>
         </div>

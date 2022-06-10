@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button';
-import classNames from 'classnames';
+import { motion } from 'framer-motion';
 
 
 
@@ -34,40 +34,21 @@ const onAddProduct = () => {
 };
     return ( 
             <div className="section__products__cards">
-                {/*<div>
-                <div className="pizza-block__selector">
-                    {availableTypes.map((type, index) => (
-                        <span
-                        key={type}
-                        onClick={() => onSelectType(index)}
-                        className={classNames({
-                            active: activeType === index,
-                            disabled: !types.includes(index),
-                        })}>
-                        {type}
-                        </span>
-                    ))}
-                </div>
-                <div>
-                {availableColors.map((size, index) => (
-                    <span
-                        key={size}
-                        onClick={() => onSelectSize(index)}
-                        className={classNames({
-                            active: activeSize === index,
-                            disabled: !sizes.includes(size),
-                    })}>
-                        {size}
-                    </span>
-                ))}
-                </div>
-            </div>*/}
+                
+    <motion.div
+        whileHover={{ scale: 1.2 }}
+            whileTap={{
+                scale: 1.3,
+                rotate: -7
+            }}
+    >
           <Button onClick={onAddProduct} className="section__products__cards__button" outline>
               <p>В корзину</p>
               <div className="section__products__cards__basket-img" >
                 {addedCount && <i>{addedCount}</i>}
               </div>
           </Button>
+    </motion.div>
           <div className="section__products__cards__title">
               <p>{name}</p>
           </div>
